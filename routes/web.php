@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@getIndex');
+Route::get('/contact', 'PagesController@getContact');
 
 
 Route::group(['prefix' => 'admin'], function () {
